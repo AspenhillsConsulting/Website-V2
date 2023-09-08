@@ -69,7 +69,4 @@ const connectedServices = [
   ['lod-400', 'owner-fm-services'],
 ]
 
-export {
-  services,
-  connectedServices,
-}
+export { services, connectedServices }

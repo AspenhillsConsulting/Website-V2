@@ -1,25 +1,24 @@
 <template>
-  <div :class="['hero-image', { 'full-width': fullWidth }]"
-       :style="{ backgroundImage: `url(${imagePath})`, height }"
-       ref="container">
-
-    <div :class="['hero-image-body', { 'darken-image': darkenImage }, tint]"
-         v-if="slots.default">
+  <div
+    :class="['hero-image', { 'full-width': fullWidth }]"
+    :style="{ backgroundImage: `url(${imagePath})`, height }"
+    ref="container"
+  >
+    <div :class="['hero-image-body', { 'darken-image': darkenImage }, tint]" v-if="slots.default">
       <slot></slot>
     </div>
 
-    <div v-else-if="texts && texts.length"
-         :class="['hero-image-body', { 'darken-image': darkenImage }, textSpacing, tint]">
-
-      <div v-for="text in texts"
-           :key="text"
-           class="hero-image-text-container">
-
-        <span :data-content="text.text"
-              v-html="text.text"
-              :class="['hero-image-text', text.size]"></span>
+    <div
+      v-else-if="texts && texts.length"
+      :class="['hero-image-body', { 'darken-image': darkenImage }, textSpacing, tint]"
+    >
+      <div v-for="text in texts" :key="text" class="hero-image-text-container">
+        <span
+          :data-content="text.text"
+          v-html="text.text"
+          :class="['hero-image-text', text.size]"
+        ></span>
       </div>
-
     </div>
   </div>
 </template>
@@ -34,7 +33,7 @@ const { offset, maxParallax } = defineProps({
   fullWidth: Boolean,
   offset: {
     type: Object,
-    default: () => ({ x: 50, y: 50 })
+    default: () => ({ x: 50, y: 50 }),
   },
   height: {
     type: String,
@@ -125,8 +124,8 @@ useParallax({
   backdrop-filter: brightness(60%) saturate(50%);
 }
 
-.hero-image-body:after{
-  content: "";
+.hero-image-body:after {
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;

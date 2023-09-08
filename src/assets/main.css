@@ -80,16 +80,16 @@ p {
   line-height: 1.3rem;
 }
 
-p+p {
+p + p {
   margin-top: 1rem;
 }
 
 ul,
-ol{
+ol {
   margin: 1.5rem 0;
 }
 
-li{
+li {
   margin: 0.5rem 0;
 }
 
@@ -191,10 +191,6 @@ a.button:focus {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important;
 }
-
-
-
-
 
 .block-quote {
   margin: 2em 1em 2em 1.5em;

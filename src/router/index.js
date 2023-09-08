@@ -7,33 +7,27 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
     },
-
-
 
     {
       path: '/contact',
       name: 'contact',
-      component: () => import('@/views/ContactView.vue')
+      component: () => import('@/views/ContactView.vue'),
     },
-
-
 
     {
       path: '/services/lod-400',
       name: 'services_lod-400',
-      component: () => import('@/views/services/lod-400/Lod400IndexView.vue')
+      component: () => import('@/views/services/lod-400/Lod400IndexView.vue'),
     },
-
-
 
     {
       path: '/:pathMatch(.*)',
       name: 'notFound',
-      component: () => import('@/views/NotFoundView.vue')
-    }
-  ]
+      component: () => import('@/views/NotFoundView.vue'),
+    },
+  ],
 })
 
 export default router

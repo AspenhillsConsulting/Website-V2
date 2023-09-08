@@ -1,29 +1,27 @@
 <template>
   <main>
-    <hero-image image-path="/img/stock-photo-team-civil-engineer-and-contractor-discussion-in-construction-site-team-architect-working-use-bim-2169445773.jpg"
-               darken-image
-               full-width
-               :height="'500px'"
-               :max-parallax="-200"
-               fixed
-               :offset="{ x: 50, y: 50 }">
+    <hero-image
+      image-path="/img/stock-photo-team-civil-engineer-and-contractor-discussion-in-construction-site-team-architect-working-use-bim-2169445773.jpg"
+      darken-image
+      full-width
+      :height="'500px'"
+      :max-parallax="-200"
+      fixed
+      :offset="{ x: 50, y: 50 }"
+    >
       <div class="header-hero-content">
         <div>
-          <span :data-content="headerLineOne"
-                v-html="headerLineOne"></span>
+          <span :data-content="headerLineOne" v-html="headerLineOne"></span>
         </div>
         <div>
-          <span :data-content="headerLineTwo"
-                v-html="headerLineTwo"></span>
+          <span :data-content="headerLineTwo" v-html="headerLineTwo"></span>
         </div>
       </div>
     </hero-image>
 
     <content-card class="my-6">
       <template v-slot:header>
-        <custom-icon :value="CubeScanIcon"
-              left
-              :size="1.2" />
+        <custom-icon :value="CubeScanIcon" left :size="1.2" />
         The future of design & management
       </template>
 
@@ -45,9 +43,7 @@
 
     <content-card class="my-6">
       <template v-slot:header>
-        <custom-icon :value="AccountTieIcon"
-              left
-              :size="1.2" />
+        <custom-icon :value="AccountTieIcon" left :size="1.2" />
         Owner services
       </template>
 
@@ -61,22 +57,16 @@
       </ul>
 
       <template v-slot:footer>
-        <router-link to="/services"
-                     class="button"
-                     tabindex="0">
+        <router-link to="/services" class="button" tabindex="0">
           All services
-          <custom-icon :value="ArrowRightThickIcon"
-                right
-                :size="1.3" />
+          <custom-icon :value="ArrowRightThickIcon" right :size="1.3" />
         </router-link>
       </template>
     </content-card>
 
     <content-card class="my-6">
       <template v-slot:header>
-        <custom-icon :value="ToolboxIcon"
-              left
-              :size="1.2" />
+        <custom-icon :value="ToolboxIcon" left :size="1.2" />
         Contractor &amp; design services
       </template>
 
@@ -91,47 +81,43 @@
       </ul>
 
       <template v-slot:footer>
-        <router-link to="/services"
-                     class="button"
-                     tabindex="0">
+        <router-link to="/services" class="button" tabindex="0">
           All services
-          <custom-icon :value="ArrowRightThickIcon"
-                right
-                :size="1.3" />
+          <custom-icon :value="ArrowRightThickIcon" right :size="1.3" />
         </router-link>
       </template>
     </content-card>
 
-    <hero-image image-path="/img/stock-photo-two-engineers-use-digital-tablet-computer-with-augmented-reality-software-to-create-d-cnc-1821601814.jpg"
-               full-width
-               :max-parallax="-50"
-               :offset="{ x: 50, y: 50 }" />
+    <hero-image
+      image-path="/img/stock-photo-two-engineers-use-digital-tablet-computer-with-augmented-reality-software-to-create-d-cnc-1821601814.jpg"
+      full-width
+      :max-parallax="-50"
+      :offset="{ x: 50, y: 50 }"
+    />
 
     <content-card class="my-6">
       <template v-slot:header>
-        <custom-icon :value="AccountGroupIcon"
-              left
-              :size="1.2" />
+        <custom-icon :value="AccountGroupIcon" left :size="1.2" />
         About us
       </template>
 
       <p>
         Our staff come from extensive backgrounds within large construction contractors. We have
-        personal experience with the selection and implementation of the same tools and processes
-        we now provide.
+        personal experience with the selection and implementation of the same tools and processes we
+        now provide.
       </p>
 
       <p>
-        We view the utilization of BIM/VDC tools and processes not simply
-        as technicians, but as end users aiming to enhance efficiency, scheduling, quality, safety,
-        and profitability. Through experience, our managers have seen firsthand the technical and
-        human challenges required for successful deployment within companies, as well as with
-        outside team members; and we can uniquely provide the solutions.
+        We view the utilization of BIM/VDC tools and processes not simply as technicians, but as end
+        users aiming to enhance efficiency, scheduling, quality, safety, and profitability. Through
+        experience, our managers have seen firsthand the technical and human challenges required for
+        successful deployment within companies, as well as with outside team members; and we can
+        uniquely provide the solutions.
       </p>
 
       <div class="block-quote">
-        We're committed to assisting your team with the use of these enhanced capabilities so you can derive the
-        maximum value from BIM/VDC.
+        We're committed to assisting your team with the use of these enhanced capabilities so you
+        can derive the maximum value from BIM/VDC.
       </div>
 
       <p>
@@ -144,46 +130,36 @@
       </p>
 
       <template v-slot:footer>
-        <router-link to="/partners-and-vendors"
-                     class="button"
-                     tabindex="0">
+        <router-link to="/partners-and-vendors" class="button" tabindex="0">
           Our Partners
-          <custom-icon :value="ArrowRightThickIcon"
-                right
-                :size="1.3" />
+          <custom-icon :value="ArrowRightThickIcon" right :size="1.3" />
         </router-link>
       </template>
     </content-card>
 
     <content-card class="my-6">
       <template v-slot:header>
-        <custom-icon :value="SealIcon"
-              left
-              :size="1.2" />
+        <custom-icon :value="SealIcon" left :size="1.2" />
         Certifications &amp; awards
       </template>
 
-      <award-card v-for="award in awards"
-             :key="award.title"
-             :award="award" />
+      <award-card v-for="award in awards" :key="award.title" :award="award" />
 
       <template v-slot:footer>
-        <router-link to="/news"
-                     class="button"
-                     tabindex="0">
+        <router-link to="/news" class="button" tabindex="0">
           ACI In the News
-          <custom-icon :value="ArrowRightThickIcon"
-                right
-                :size="1.3" />
+          <custom-icon :value="ArrowRightThickIcon" right :size="1.3" />
         </router-link>
       </template>
     </content-card>
 
-    <hero-image image-path="/img/stock-photo-russia-kemerovo-land-surveyor-equipment-robotic-total-station-theodolite-standing-on-1342225910.jpg"
-               full-width
-               :height="'300px'"
-               :max-parallax="-50"
-               :offset="{ x: 50, y: 90 }" />
+    <hero-image
+      image-path="/img/stock-photo-russia-kemerovo-land-surveyor-equipment-robotic-total-station-theodolite-standing-on-1342225910.jpg"
+      full-width
+      :height="'300px'"
+      :max-parallax="-50"
+      :offset="{ x: 50, y: 90 }"
+    />
   </main>
 </template>
 
@@ -219,7 +195,7 @@ import awards from '@/data/awards.js'
   height: 100%;
 }
 
-.header-hero-content>div>span {
+.header-hero-content > div > span {
   position: relative;
   z-index: 0;
   display: inline-block;
@@ -229,19 +205,19 @@ import awards from '@/data/awards.js'
   font-family: Tahoma, sans-serif;
 }
 
-.header-hero-content> :first-child>span {
+.header-hero-content > :first-child > span {
   font-size: 2.3rem;
   max-width: 30ch;
   /* margin-bottom: 6rem; */
   letter-spacing: 0.02em;
 }
 
-.header-hero-content> :last-child>span {
+.header-hero-content > :last-child > span {
   font-size: 1.8rem;
   letter-spacing: 0.04em;
 }
 
-.header-hero-content>*>span:after {
+.header-hero-content > * > span:after {
   content: attr(data-content);
   color: black;
   -webkit-text-stroke: 0.2em #1f1f1f;
@@ -257,21 +233,21 @@ import awards from '@/data/awards.js'
   padding: 0;
 }
 
-.sparse-list>li {
+.sparse-list > li {
   margin: 2rem 0;
   font-size: 1rem;
   max-width: 70ch;
 }
 
-.sparse-list>li:first-child {
+.sparse-list > li:first-child {
   margin-top: 0;
 }
 
-.sparse-list>li:last-child {
+.sparse-list > li:last-child {
   margin-bottom: 0;
 }
 
-.sparse-list>li:before {
+.sparse-list > li:before {
   content: '▶';
   color: var(--accent-color);
   margin-right: 0.5rem;
@@ -287,7 +263,7 @@ import awards from '@/data/awards.js'
   gap: 3rem;
 }
 
-.services>* {
+.services > * {
   flex: 1 1 100%;
 }
 
@@ -296,7 +272,7 @@ import awards from '@/data/awards.js'
   margin: 0 auto;
 }
 
-.award+.award {
+.award + .award {
   margin-top: 2rem;
 }
 </style>

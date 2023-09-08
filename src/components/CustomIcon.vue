@@ -17,20 +17,20 @@
 defineProps({
   size: {
     type: Number,
-    default: 1
+    default: 1,
   },
 
   value: {
-    type: String
+    type: String,
   },
 
   left: {
-    type: Boolean
+    type: Boolean,
   },
 
   right: {
-    type: Boolean
-  }
+    type: Boolean,
+  },
 })
 </script>
 

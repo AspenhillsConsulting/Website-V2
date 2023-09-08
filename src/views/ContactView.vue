@@ -2,27 +2,24 @@
   <main>
     <content-card>
       <p>
-        Whether you already know which BIM/VDC services you need or you're
-        just starting to investigate the world of modern construction
-        and project management, we're here to answer all of your questions.
+        Whether you already know which BIM/VDC services you need or you're just starting to
+        investigate the world of modern construction and project management, we're here to answer
+        all of your questions.
       </p>
     </content-card>
 
     <content-card>
       <template v-slot:header>
-        <custom-icon :value="CardAccountDetails"
-              left />
+        <custom-icon :value="CardAccountDetails" left />
         Contact info
       </template>
       <contact-card />
       <template v-slot:footer>
         <div class="social-links">
-          <a href="https://www.linkedin.com/company/aspenhills-consulting-inc."
-             target="_blank">
+          <a href="https://www.linkedin.com/company/aspenhills-consulting-inc." target="_blank">
             <custom-icon :value="LinkedinIcon" />
           </a>
-          <a href="http://www.facebook.com/aspenhillsconsulting"
-             target="_blank">
+          <a href="http://www.facebook.com/aspenhillsconsulting" target="_blank">
             <custom-icon :value="FacebookIcon" />
           </a>
         </div>
@@ -35,11 +32,7 @@
 import ContentCard from '@/components/ContentCard.vue'
 import CustomIcon from '@/components/CustomIcon.vue'
 import ContactCard from '@/components/ContactCard.vue'
-import {
-  LinkedinIcon,
-  FacebookIcon,
-  CardAccountDetails,
-} from '@/components/icons'
+import { LinkedinIcon, FacebookIcon, CardAccountDetails } from '@/components/icons'
 </script>
 
 <style scoped>
@@ -61,7 +54,7 @@ main {
   border-top: 1px solid #ddd;
 }
 
-.social-links>a {
+.social-links > a {
   color: inherit;
 }
 

@@ -2,11 +2,13 @@
   <header>
     <div class="header-inner">
       <div class="branding">
-        <img alt="Aspenhills Consulting logo"
-             class="logo"
-             src="@/assets/logo.svg"
-             width="42"
-             height="42" />
+        <img
+          alt="Aspenhills Consulting logo"
+          class="logo"
+          src="@/assets/logo.svg"
+          width="42"
+          height="42"
+        />
 
         <div class="title">
           <div>Aspenhills</div>
@@ -15,31 +17,23 @@
       </div>
 
       <nav>
-        <RouterLink to="/"
-                    tabindex="0">
-          <custom-icon :value="HomeIcon"
-                left />
+        <RouterLink to="/" tabindex="0">
+          <custom-icon :value="HomeIcon" left />
           Home
         </RouterLink>
 
-        <RouterLink to="/services"
-                    tabindex="0">
-          <custom-icon :value="MoreIcon"
-                left />
+        <RouterLink to="/services" tabindex="0">
+          <custom-icon :value="MoreIcon" left />
           Services
         </RouterLink>
 
-        <RouterLink to="/projects"
-                    tabindex="0">
-          <custom-icon :value="ViewCarouselIcon"
-                left />
+        <RouterLink to="/projects" tabindex="0">
+          <custom-icon :value="ViewCarouselIcon" left />
           Projects
         </RouterLink>
 
-        <RouterLink to="/contact"
-                    tabindex="0">
-          <custom-icon :value="EmailIcon"
-                left />
+        <RouterLink to="/contact" tabindex="0">
+          <custom-icon :value="EmailIcon" left />
           Contact
         </RouterLink>
       </nav>
@@ -51,23 +45,17 @@
 
   <footer>
     <div class="footer-column">
-      <div class="footer-column-title">
-        Contact
-      </div>
-      <div style="font-size: 0.9rem;">
+      <div class="footer-column-title">Contact</div>
+      <div style="font-size: 0.9rem">
         <contact-card small />
       </div>
     </div>
 
     <div class="footer-column">
-      <div class="footer-column-title">
-        Services
-      </div>
+      <div class="footer-column-title">Services</div>
       <ul class="services-list">
-        <li v-for="service in services"
-            :key="service.slug">
-          <router-link :to="`/services/${service.slug}`"
-                       tabindex="0">
+        <li v-for="service in services" :key="service.slug">
+          <router-link :to="`/services/${service.slug}`" tabindex="0">
             {{ service.title }}
           </router-link>
         </li>
@@ -78,10 +66,12 @@
       <div class="footer-column-title">Links</div>
       <ul class="extra-links">
         <li>
-          <img src="/img/awards/vosb.webp"
-               width="50"
-               class="vosb-logo"
-               alt="Veteran-owned small business logo" />
+          <img
+            src="/img/awards/vosb.webp"
+            width="50"
+            class="vosb-logo"
+            alt="Veteran-owned small business logo"
+          />
         </li>
       </ul>
     </div>
@@ -91,12 +81,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import CustomIcon from '@/components/CustomIcon.vue'
-import {
-  HomeIcon,
-  EmailIcon,
-  ViewCarouselIcon,
-  MoreIcon,
-} from '@/components/icons'
+import { HomeIcon, EmailIcon, ViewCarouselIcon, MoreIcon } from '@/components/icons'
 import ContactCard from '@/components/ContactCard.vue'
 import { services } from '@/data/services.js'
 </script>
@@ -141,11 +126,11 @@ header {
   line-height: 1.4rem;
 }
 
-.title> :first-child {
+.title > :first-child {
   font-size: 1.52rem;
 }
 
-.title> :last-child {
+.title > :last-child {
   font-size: 1.4rem;
 }
 
@@ -154,7 +139,7 @@ nav {
   flex-wrap: nowrap;
 }
 
-nav>a {
+nav > a {
   padding: 1rem;
   display: flex;
   color: #f3f3f3;
@@ -165,12 +150,12 @@ nav>a {
   text-decoration: none;
 }
 
-nav>a:hover,
-nav>a:focus {
+nav > a:hover,
+nav > a:focus {
   background: var(--accent-color-opacity);
 }
 
-nav>a[aria-current='page'] {
+nav > a[aria-current='page'] {
   background: var(--accent-color);
   color: var(--text-primary-color);
 }
@@ -193,7 +178,7 @@ footer {
   flex: 0 1 auto;
 }
 
-@media(min-width:900px) {
+@media (min-width: 900px) {
   footer {
     gap: 1rem;
     flex-direction: row;
@@ -221,16 +206,16 @@ footer {
   padding: 0;
 }
 
-.services-list>li {
+.services-list > li {
   padding: 0;
   margin: 1rem 0;
 }
 
-.services-list>li:first-child {
+.services-list > li:first-child {
   margin-top: 0;
 }
 
-.services-list>li:last-child {
+.services-list > li:last-child {
   margin-bottom: 0;
 }
 
@@ -244,16 +229,16 @@ footer {
   padding: 0;
 }
 
-.extra-links>li {
+.extra-links > li {
   padding: 0;
   margin: 1rem 0;
 }
 
-.extra-links>li:first-child {
+.extra-links > li:first-child {
   margin-top: 0;
 }
 
-.extra-links>li:last-child {
+.extra-links > li:last-child {
   margin-bottom: 0;
 }
 

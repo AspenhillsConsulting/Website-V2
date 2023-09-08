@@ -1,10 +1,6 @@
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 
-export default function useParallax({
-  targetCallback,
-  maxParallax,
-  offset,
-}) {
+export default function useParallax({ targetCallback, maxParallax, offset }) {
   let ticking = false
   let lastKnownScrollPosition
   let target = ref(null)

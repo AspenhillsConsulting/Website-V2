@@ -10,11 +10,7 @@ const projects = [
       city: 'Colorado Springs',
       latLon: '38.8479662,-104.8279233',
     },
-    tags: [
-      'LOD 400',
-      'tag 2',
-      'tag 3',
-    ],
+    tags: ['LOD 400', 'tag 2', 'tag 3'],
   },
   {
     slug: 'air-force-academy-cadet-chapel-rennovation',
@@ -27,10 +23,7 @@ const projects = [
       city: 'Colorado Springs',
       latLon: '38.9978372,-104.8630677',
     },
-    tags: [
-      'tag 2',
-      'tag 4',
-    ],
+    tags: ['tag 2', 'tag 4'],
   },
   {
     slug: 'university-tennessee-martin-stem',
@@ -43,10 +36,7 @@ const projects = [
       city: 'Martin',
       latLon: '36.3431813,-88.8666425',
     },
-    tags: [
-      'tag 3',
-      'tag 4',
-    ],
+    tags: ['tag 3', 'tag 4'],
   },
   {
     slug: 'state-of-wyoming-capitol-building',
@@ -59,11 +49,7 @@ const projects = [
       city: 'Cheyenne',
       latLon: '41.1402745,-104.82255',
     },
-    tags: [
-      'LOD 400',
-      'tag 3',
-      'tag 4',
-    ],
+    tags: ['LOD 400', 'tag 3', 'tag 4'],
   },
   {
     slug: 'fort-irwin-army-hospital',
@@ -76,16 +62,11 @@ const projects = [
       city: 'Fort Irwin',
       latLon: '35.2729993,-116.6839366',
     },
-    tags: [
-      'tag 1',
-      'tag 3',
-    ],
+    tags: ['tag 1', 'tag 3'],
   },
 ]
 
-export {
-  projects
-}
+export { projects }
 
 // export const getters = {
 //   projectStates: state => {

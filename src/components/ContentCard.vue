@@ -1,22 +1,18 @@
 <template>
   <div class="card">
-    <div class="card-header"
-         v-if="slots.header">
+    <div class="card-header" v-if="slots.header">
       <slot name="header"></slot>
     </div>
 
-    <div class="card-subheader"
-         v-if="slots.subheader">
+    <div class="card-subheader" v-if="slots.subheader">
       <slot name="subheader"></slot>
     </div>
 
-    <div class="card-body"
-         v-if="slots.default">
+    <div class="card-body" v-if="slots.default">
       <slot></slot>
     </div>
 
-    <div class="card-footer"
-         v-if="slots.footer">
+    <div class="card-footer" v-if="slots.footer">
       <slot name="footer"></slot>
     </div>
   </div>
@@ -64,4 +60,5 @@ const slots = useSlots()
   padding: 1rem;
   display: flex;
   justify-content: end;
-}</style>
+}
+</style>
