@@ -46,7 +46,7 @@ const { offset, maxParallax } = defineProps({
   },
   texts: {
     type: Array,
-    default: [],
+    default: () => [],
   },
   textSpacing: {
     type: String,

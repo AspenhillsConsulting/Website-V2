@@ -17,28 +17,28 @@
       <nav>
         <RouterLink to="/"
                     tabindex="0">
-          <icon :value="HomeIcon"
+          <custom-icon :value="HomeIcon"
                 left />
           Home
         </RouterLink>
 
         <RouterLink to="/services"
                     tabindex="0">
-          <icon :value="MoreIcon"
+          <custom-icon :value="MoreIcon"
                 left />
           Services
         </RouterLink>
 
         <RouterLink to="/projects"
                     tabindex="0">
-          <icon :value="ViewCarouselIcon"
+          <custom-icon :value="ViewCarouselIcon"
                 left />
           Projects
         </RouterLink>
 
         <RouterLink to="/contact"
                     tabindex="0">
-          <icon :value="EmailIcon"
+          <custom-icon :value="EmailIcon"
                 left />
           Contact
         </RouterLink>
@@ -90,7 +90,7 @@
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import Icon from '@/components/Icon.vue'
+import CustomIcon from '@/components/CustomIcon.vue'
 import {
   HomeIcon,
   EmailIcon,

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <HeroImage image-path="/img/stock-photo-team-civil-engineer-and-contractor-discussion-in-construction-site-team-architect-working-use-bim-2169445773.jpg"
+    <hero-image image-path="/img/stock-photo-team-civil-engineer-and-contractor-discussion-in-construction-site-team-architect-working-use-bim-2169445773.jpg"
                darken-image
                full-width
                :height="'500px'"
@@ -17,11 +17,11 @@
                 v-html="headerLineTwo"></span>
         </div>
       </div>
-    </HeroImage>
+    </hero-image>
 
-    <Card class="my-6">
+    <content-card class="my-6">
       <template v-slot:header>
-        <icon :value="CubeScanIcon"
+        <custom-icon :value="CubeScanIcon"
               left
               :size="1.2" />
         The future of design & management
@@ -41,11 +41,11 @@
         Whether you're already using modern practices or just starting to transition from
         traditional methods, Aspenhills Consulting are your in-house technology experts.
       </p>
-    </Card>
+    </content-card>
 
-    <Card class="my-6">
+    <content-card class="my-6">
       <template v-slot:header>
-        <icon :value="AccountTieIcon"
+        <custom-icon :value="AccountTieIcon"
               left
               :size="1.2" />
         Owner services
@@ -65,16 +65,16 @@
                      class="button"
                      tabindex="0">
           All services
-          <icon :value="ArrowRightThickIcon"
+          <custom-icon :value="ArrowRightThickIcon"
                 right
                 :size="1.3" />
         </router-link>
       </template>
-    </Card>
+    </content-card>
 
-    <Card class="my-6">
+    <content-card class="my-6">
       <template v-slot:header>
-        <icon :value="ToolboxIcon"
+        <custom-icon :value="ToolboxIcon"
               left
               :size="1.2" />
         Contractor &amp; design services
@@ -95,21 +95,21 @@
                      class="button"
                      tabindex="0">
           All services
-          <icon :value="ArrowRightThickIcon"
+          <custom-icon :value="ArrowRightThickIcon"
                 right
                 :size="1.3" />
         </router-link>
       </template>
-    </Card>
+    </content-card>
 
-    <HeroImage image-path="/img/stock-photo-two-engineers-use-digital-tablet-computer-with-augmented-reality-software-to-create-d-cnc-1821601814.jpg"
+    <hero-image image-path="/img/stock-photo-two-engineers-use-digital-tablet-computer-with-augmented-reality-software-to-create-d-cnc-1821601814.jpg"
                full-width
                :max-parallax="-50"
                :offset="{ x: 50, y: 50 }" />
 
-    <Card class="my-6">
+    <content-card class="my-6">
       <template v-slot:header>
-        <icon :value="AccountGroupIcon"
+        <custom-icon :value="AccountGroupIcon"
               left
               :size="1.2" />
         About us
@@ -148,22 +148,22 @@
                      class="button"
                      tabindex="0">
           Our Partners
-          <icon :value="ArrowRightThickIcon"
+          <custom-icon :value="ArrowRightThickIcon"
                 right
                 :size="1.3" />
         </router-link>
       </template>
-    </Card>
+    </content-card>
 
-    <Card class="my-6">
+    <content-card class="my-6">
       <template v-slot:header>
-        <icon :value="SealIcon"
+        <custom-icon :value="SealIcon"
               left
               :size="1.2" />
         Certifications &amp; awards
       </template>
 
-      <award v-for="award in awards"
+      <award-card v-for="award in awards"
              :key="award.title"
              :award="award" />
 
@@ -172,14 +172,14 @@
                      class="button"
                      tabindex="0">
           ACI In the News
-          <icon :value="ArrowRightThickIcon"
+          <custom-icon :value="ArrowRightThickIcon"
                 right
                 :size="1.3" />
         </router-link>
       </template>
-    </Card>
+    </content-card>
 
-    <HeroImage image-path="/img/stock-photo-russia-kemerovo-land-surveyor-equipment-robotic-total-station-theodolite-standing-on-1342225910.jpg"
+    <hero-image image-path="/img/stock-photo-russia-kemerovo-land-surveyor-equipment-robotic-total-station-theodolite-standing-on-1342225910.jpg"
                full-width
                :height="'300px'"
                :max-parallax="-50"
@@ -190,9 +190,9 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import HeroImage from '@/components/HeroImage.vue'
-import Card from '@/components/Card.vue'
-import Icon from '@/components/Icon.vue'
-import Award from '@/components/Award.vue'
+import ContentCard from '@/components/ContentCard.vue'
+import CustomIcon from '@/components/CustomIcon.vue'
+import AwardCard from '@/components/AwardCard.vue'
 import {
   AccountTieIcon,
   ToolboxIcon,
@@ -200,7 +200,6 @@ import {
   AccountGroupIcon,
   SealIcon,
   ArrowRightThickIcon,
-  HandshakeOutlineIcon,
 } from '@/components/icons'
 
 const headerLineOne = 'Your emerging AECO technology and process partner'

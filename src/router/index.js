@@ -19,11 +19,11 @@ const router = createRouter({
     },
 
 
-    
+
     {
       path: '/services/lod-400',
       name: 'services_lod-400',
-      component: () => import('@/views/services/lod-400/index.vue')
+      component: () => import('@/views/services/lod-400/Lod400IndexView.vue')
     },
 
 

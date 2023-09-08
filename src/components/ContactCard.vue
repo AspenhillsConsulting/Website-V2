@@ -1,13 +1,13 @@
 <template>
   <div :class="['vcard', { small }]">
         <div class="vcard-section">
-          <icon :value="AccountTieIcon"
+          <custom-icon :value="AccountTieIcon"
                 :size="1.3" />
           <span class="fn"> Michael Sibo </span>
         </div>
 
         <div class="vcard-section">
-          <icon :value="EmailIcon"
+          <custom-icon :value="EmailIcon"
                 :size="1.3" />
           <a class="email"
              href="mailto:mikesibo@aspenhillsconsulting.com">
@@ -16,13 +16,13 @@
         </div>
 
         <div class="vcard-section">
-          <icon :value="PhoneIcon"
+          <custom-icon :value="PhoneIcon"
                 :size="1.3" />
           <span class="tel"> +1-719-338-6078 </span>
         </div>
 
         <div class="vcard-section">
-          <icon :value="MapIcon"
+          <custom-icon :value="MapIcon"
                 :size="1.3" />
           <div class="adr">
             <div class="street-address">9936 English Ivy Ct</div>
@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-import Icon from '@/components/Icon.vue'
+import CustomIcon from '@/components/CustomIcon.vue'
 import {
   MapIcon,
   AccountTieIcon,

@@ -1,16 +1,16 @@
 <template>
   <main>
-    <card>
+    <content-card>
       <p>
         Whether you already know which BIM/VDC services you need or you're
         just starting to investigate the world of modern construction
         and project management, we're here to answer all of your questions.
       </p>
-    </card>
+    </content-card>
 
-    <card>
+    <content-card>
       <template v-slot:header>
-        <icon :value="CardAccountDetails"
+        <custom-icon :value="CardAccountDetails"
               left />
         Contact info
       </template>
@@ -19,21 +19,21 @@
         <div class="social-links">
           <a href="https://www.linkedin.com/company/aspenhills-consulting-inc."
              target="_blank">
-            <icon :value="LinkedinIcon" />
+            <custom-icon :value="LinkedinIcon" />
           </a>
           <a href="http://www.facebook.com/aspenhillsconsulting"
              target="_blank">
-            <icon :value="FacebookIcon" />
+            <custom-icon :value="FacebookIcon" />
           </a>
         </div>
       </template>
-    </card>
+    </content-card>
   </main>
 </template>
 
 <script setup>
-import Card from '@/components/Card.vue'
-import Icon from '@/components/Icon.vue'
+import ContentCard from '@/components/ContentCard.vue'
+import CustomIcon from '@/components/CustomIcon.vue'
 import ContactCard from '@/components/ContactCard.vue'
 import {
   LinkedinIcon,

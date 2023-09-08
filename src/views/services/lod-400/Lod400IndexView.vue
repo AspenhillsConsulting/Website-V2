@@ -2,7 +2,7 @@
   <main>
     <HeroImage v-bind="lod400ImageConfig" />
 
-    <Card class="my-6">
+    <content-card class="my-6">
       <template v-slot:header>
         The future of construction management
       </template>
@@ -19,11 +19,11 @@
       <div class="lod-400-process-container">
         Modelling → Fabrication → Scheduling
       </div>
-    </Card>
+    </content-card>
 
     <HeroImage v-bind="modelToMachineImageConfig" />
 
-    <Card class="my-6">
+    <content-card class="my-6">
       <template v-slot:header>
         Automated fabrication
       </template>
@@ -41,11 +41,11 @@
         <li>Multi-trade pre-assembly modeling</li>
         <li>Output to label printers and TigerStop machines</li>
       </ul>
-    </Card>
+    </content-card>
 
     <HeroImage v-bind="lod400ExpertsImageConfig" />
 
-    <Card class="my-6">
+    <content-card class="my-6">
       <template v-slot:header>
         Select projects
       </template>
@@ -62,15 +62,14 @@
         <li>Multi-trade pre-assembly modeling</li>
         <li>Output to label printers and TigerStop machines</li>
       </ul>
-    </Card>
+    </content-card>
   </main>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import HeroImage from '@/components/HeroImage.vue'
-import Card from '@/components/Card.vue'
-import Icon from '@/components/Icon.vue'
+import ContentCard from '@/components/ContentCard.vue'
 
 const lod400ImageConfig = ref({
   imagePath: '/img/services/lod-400/lod400_rack.png',

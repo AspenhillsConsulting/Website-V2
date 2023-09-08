@@ -16,8 +16,6 @@ export default function useParallax({
 
     ticking = true
 
-    const elementTop = target.value.getBoundingClientRect().top
-
     lastKnownScrollPosition =
       window.scrollY !== undefined
         ? window.scrollY
