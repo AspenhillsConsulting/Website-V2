@@ -1,6 +1,6 @@
 <template>
   <main>
-    <HeroImage v-bind="lod400ImageConfig" />
+    <hero-image v-bind="lod400ImageConfig" />
 
     <content-card class="my-6">
       <template v-slot:header> The future of construction management </template>
@@ -21,7 +21,7 @@
       <div class="lod-400-process-container">Modelling → Fabrication → Scheduling</div>
     </content-card>
 
-    <HeroImage v-bind="modelToMachineImageConfig" />
+    <hero-image v-bind="modelToMachineImageConfig" />
 
     <content-card class="my-6">
       <template v-slot:header> Automated fabrication </template>
@@ -41,7 +41,7 @@
       </ul>
     </content-card>
 
-    <HeroImage v-bind="lod400ExpertsImageConfig" />
+    <hero-image v-bind="lod400ExpertsImageConfig" />
 
     <content-card class="my-6">
       <template v-slot:header> Select projects </template>
