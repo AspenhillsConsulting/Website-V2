@@ -1,6 +1,13 @@
 <template>
   <main>
-    <content-card>
+    <hero-image
+      image-path="/img/stock-photo-news-corporate-background-blue-abstract-business-concept-1338237566.jpg"
+      full-width
+      height="250px"
+      :offset="{ x: 50, y: 50 }"
+    />
+
+    <content-card class="my-4">
       <template v-slot:header>
         <custom-icon :value="NewspaperVariantMultipleOutlineIcon" left />
         ACI in the news
@@ -26,9 +33,7 @@
             </div>
 
             <div class="news-item-link">
-              <a :href="newsItem.link" tabindex="0" target="_blank">
-                Read more...
-              </a>
+              <a :href="newsItem.link" tabindex="0" target="_blank"> read more... </a>
             </div>
           </div>
         </div>
@@ -41,16 +46,17 @@
 import { news } from '@/data/news.js'
 import ContentCard from '@/components/ContentCard.vue'
 import CustomIcon from '@/components/CustomIcon.vue'
+import HeroImage from '@/components/HeroImage.vue'
 import { NewspaperVariantMultipleOutlineIcon } from '@/components/icons'
 </script>
 
 <style scoped>
-.news-list{
-  padding-top:1rem;
+.news-list {
+  padding-top: 1rem;
 }
 
 .news-item {
-  --image-size: 50px;
+  --image-size: 72px;
   margin-top: 4rem;
   display: flex;
   gap: 1rem;
@@ -78,20 +84,20 @@ import { NewspaperVariantMultipleOutlineIcon } from '@/components/icons'
 }
 
 .news-item-title {
-  font-size: 1.2rem;
-  line-height:0.9rem;
+  font-size: 1.25rem;
+  margin-top: -0.4rem;
 }
 
 .news-item-date {
   font-size: 0.9rem;
-  margin-top:0.3rem;
 }
 
-.news-item-subtitle{
-  margin-top:0.75rem;
+.news-item-subtitle {
+  margin-top: 0.75rem;
 }
 
-.news-item-link{
-  margin-top:0.25rem;
+.news-item-link {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
 }
 </style>
