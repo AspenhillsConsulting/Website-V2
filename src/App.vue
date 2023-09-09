@@ -66,12 +66,11 @@
       <div class="footer-column-title">Links</div>
       <ul class="extra-links">
         <li>
-          <img
-            src="/img/awards/vosb.webp"
-            width="50"
-            class="vosb-logo"
-            alt="Veteran-owned small business logo"
-          />
+          <router-link to="/projects"> Projects </router-link>
+        </li>
+
+        <li>
+          <router-link to="/news"> News </router-link>
         </li>
       </ul>
     </div>
