@@ -17,7 +17,7 @@ const services = [
     title: 'LIDAR Scanning Services',
     slug: 'lidar-scanning-services',
     image: {
-      src: '/services/lidar/lidar_example_1.jpg',
+      src: '/img/services/lidar/lidar_example_1.jpg',
       position: '50% 40%',
     },
     list: [
@@ -30,7 +30,7 @@ const services = [
     title: 'Robotic Total Station Data Integration',
     slug: 'robotic-total-station-data-integration',
     image: {
-      src: '/stock-photo-russia-kemerovo-land-surveyor-equipment-robotic-total-station-theodolite-standing-on-1342225910.jpg',
+      src: '/img/stock-photo-russia-kemerovo-land-surveyor-equipment-robotic-total-station-theodolite-standing-on-1342225910.jpg',
       position: '50% 40%',
     },
     summary: 'Total Station points can be inserted into our models for download to your RTS units',
@@ -39,7 +39,7 @@ const services = [
     title: 'Owner FM Services',
     slug: 'owner-fm-services',
     image: {
-      src: '/services/Basement model.jpg',
+      src: '/img/services/Basement model.jpg',
       position: '50% 20%',
     },
     list: [

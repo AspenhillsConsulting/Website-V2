@@ -1,7 +1,7 @@
 <template>
   <div
     :class="['hero-image', { 'full-width': fullWidth }]"
-    :style="{ backgroundImage: `url(${imagePath})`, height }"
+    :style="{ backgroundImage: `url('${imagePath}')`, height }"
     ref="container"
   >
     <div :class="['hero-image-body', { 'darken-image': darkenImage }, tint]" v-if="slots.default">
@@ -9,7 +9,7 @@
     </div>
 
     <div
-      v-else-if="texts && texts.length"
+      v-else-if="(texts && texts.length) || tint"
       :class="['hero-image-body', { 'darken-image': darkenImage }, textSpacing, tint]"
     >
       <div v-for="text in texts" :key="text" class="hero-image-text-container">
