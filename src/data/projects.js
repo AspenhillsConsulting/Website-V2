@@ -2,7 +2,7 @@ const projects = [
   {
     slug: 'colorado-college-robson-ice-arena',
     title: 'Colorado College Robson Ice Arena',
-    icon: '/other_logos/colorado_college.png',
+    icon: '/img/logos/colorado_college.png',
     date: 'mmm 20YY',
     location: {
       shortState: 'co',
@@ -13,9 +13,9 @@ const projects = [
     tags: ['LOD 400', 'tag 2', 'tag 3'],
   },
   {
-    slug: 'air-force-academy-cadet-chapel-rennovation',
-    title: 'Air Force Academy Cadet Chapel Rennovation',
-    icon: '/other_logos/af-logo.png',
+    slug: 'air-force-academy-cadet-chapel-renovation',
+    title: 'Air Force Academy Cadet Chapel Renovation',
+    icon: '/img/logos/af-logo.png',
     date: 'mmm 20YY',
     location: {
       shortState: 'co',
@@ -28,7 +28,7 @@ const projects = [
   {
     slug: 'university-tennessee-martin-stem',
     title: 'University Tennessee Martin STEM',
-    icon: '/other_logos/utmartin.jpg',
+    icon: '/img/logos/utmartin.jpg',
     date: 'mmm 20YY',
     location: {
       shortState: 'tn',
@@ -41,7 +41,7 @@ const projects = [
   {
     slug: 'state-of-wyoming-capitol-building',
     title: 'State of Wyoming Capitol Building',
-    icon: '/other_logos/wyoming_capitol.jpg',
+    icon: '/img/logos/wyoming_capitol.jpg',
     date: 'mmm 20YY',
     location: {
       shortState: 'wy',
@@ -54,7 +54,7 @@ const projects = [
   {
     slug: 'fort-irwin-army-hospital',
     title: 'Fort Irwin Army Hospital',
-    icon: '/other_logos/fortirwin.png',
+    icon: '/img/logos/fortirwin.png',
     date: 'mmm 20YY',
     location: {
       shortState: 'ca',
