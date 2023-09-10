@@ -22,7 +22,7 @@
           Home
         </RouterLink>
 
-        <RouterLink to="/services" tabindex="0">
+        <RouterLink to="/services" tabindex="0" :exact="false">
           <custom-icon :value="MoreIcon" left />
           Services
         </RouterLink>

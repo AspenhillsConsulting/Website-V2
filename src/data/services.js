@@ -7,17 +7,11 @@ const services = [
     title: 'LOD 400 - Fabrication Level Trade Modeling',
     slug: 'lod-400',
     image: {
-      src: '/services/lod400/lod400_rack.png',
+      src: '/img/services/lod-400/lod400_rack.png',
       position: '50% 60%',
     },
-    list: [
-      'Individual component models',
-      'Spool Drawings which are formatted to meet your preferences',
-      'MAJ files for direct download to Manufacturing Equipment',
-      'Pre-Cutting and Pre-Fabrication modeling',
-      'Multi-Trade Pre-Assembly Modeling',
-      'Output to label printers',
-    ],
+    summary:
+      'LOD 400 offers unparalleled coordination and efficiency throughout the lifecycle of your project. By modelling each component to the level required for automated fabrication and then scheduling the delivery and assembly of every part, LOD 400 project plans are the future of construction management, today.',
   },
   {
     title: 'LIDAR Scanning Services',

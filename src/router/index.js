@@ -30,6 +30,12 @@ const router = createRouter({
     },
 
     {
+      path: '/services',
+      name: 'services',
+      component: () => import('@/views/services/ServicesIndexView.vue'),
+    },
+
+    {
       path: '/services/lod-400',
       name: 'services_lod-400',
       component: () => import('@/views/services/lod-400/Lod400IndexView.vue'),
