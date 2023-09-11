@@ -5,7 +5,8 @@
         :image-path="service.image.src"
         full-width
         tint="black"
-        height="200px"
+        :height="180"
+        :offset="service.image.offset"
         v-if="service.image && service.image.src"
       />
 
@@ -14,9 +15,7 @@
           {{ service.title }}
         </template>
 
-        <div>
-          {{ service.summary }}
-        </div>
+        <div v-html="service.summary"></div>
 
         <template v-slot:footer>
           <router-link class="button" :to="`/services/${service.slug}`">
@@ -40,10 +39,14 @@ import { services } from '@/data/services'
 
 <style scoped>
 .service {
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 
 .service:first-child {
-  margin-top: 1rem;
+  margin-top: 0;
+}
+
+main{
+  margin-bottom: 8rem;
 }
 </style>

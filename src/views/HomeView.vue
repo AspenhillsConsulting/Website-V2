@@ -4,10 +4,8 @@
       image-path="/img/stock-photo-team-civil-engineer-and-contractor-discussion-in-construction-site-team-architect-working-use-bim-2169445773.jpg"
       darken-image
       full-width
-      :height="'500px'"
-      :max-parallax="-200"
-      fixed
-      :offset="{ x: 50, y: 50 }"
+      :height="500"
+      :offset="{ x: 50, y: -50 }"
     >
       <div class="header-hero-content">
         <div>
@@ -91,7 +89,6 @@
     <hero-image
       image-path="/img/stock-photo-two-engineers-use-digital-tablet-computer-with-augmented-reality-software-to-create-d-cnc-1821601814.jpg"
       full-width
-      :max-parallax="-50"
       :offset="{ x: 50, y: 50 }"
     />
 
@@ -130,8 +127,8 @@
       </p>
 
       <template v-slot:footer>
-        <router-link to="/partners-and-vendors" class="button" tabindex="0">
-          Our Partners
+        <router-link to="/projects" class="button" tabindex="0">
+          Our Projects
           <custom-icon :value="ArrowRightThickIcon" right :size="1.3" />
         </router-link>
       </template>
@@ -156,8 +153,7 @@
     <hero-image
       image-path="/img/stock-photo-russia-kemerovo-land-surveyor-equipment-robotic-total-station-theodolite-standing-on-1342225910.jpg"
       full-width
-      :height="'300px'"
-      :max-parallax="-50"
+      :height="300"
       :offset="{ x: 50, y: 90 }"
     />
   </main>

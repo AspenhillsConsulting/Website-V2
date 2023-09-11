@@ -40,7 +40,6 @@
     </div>
   </header>
 
-  <!-- <parallax-background /> -->
   <RouterView />
 
   <footer>
@@ -66,11 +65,19 @@
       <div class="footer-column-title">Links</div>
       <ul class="extra-links">
         <li>
+          <router-link to="/services"> Services </router-link>
+        </li>
+
+        <li>
           <router-link to="/projects"> Projects </router-link>
         </li>
 
         <li>
           <router-link to="/news"> News </router-link>
+        </li>
+
+        <li>
+          <router-link to="/contact"> Contact </router-link>
         </li>
       </ul>
     </div>

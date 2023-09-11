@@ -3,7 +3,7 @@
     <hero-image
       image-path="/img/stock-photo-news-corporate-background-blue-abstract-business-concept-1338237566.jpg"
       full-width
-      height="250px"
+      :height="250"
       :offset="{ x: 50, y: 50 }"
     />
 
