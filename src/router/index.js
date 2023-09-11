@@ -42,6 +42,12 @@ const router = createRouter({
     },
 
     {
+      path: '/services/lidar-scanning',
+      name: 'services_lidar-scanning',
+      component: () => import('@/views/services/lidar-scanning/LidarScanningIndexView.vue'),
+    },
+
+    {
       path: '/projects',
       name: 'projects',
       component: () => import('@/views/projects/ProjectsIndexView.vue'),

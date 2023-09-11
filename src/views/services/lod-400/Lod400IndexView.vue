@@ -18,7 +18,13 @@
         construction management, today.
       </p>
 
-      <div class="lod-400-process-container">Modelling → Fabrication → Scheduling</div>
+      <div class="lod-400-process-container">
+        Modelling
+        <custom-icon :value="ArrowRightThickIcon" />
+        Fabrication
+        <custom-icon :value="ArrowRightThickIcon" />
+        Scheduling
+      </div>
     </content-card>
 
     <hero-image v-bind="modelToMachineImageConfig" />
@@ -67,6 +73,8 @@
 import { ref } from 'vue'
 import HeroImage from '@/components/HeroImage.vue'
 import ContentCard from '@/components/ContentCard.vue'
+import CustomIcon from '@/components/CustomIcon.vue'
+import { ArrowRightThickIcon } from '@/components/icons'
 
 const lod400ImageConfig = ref({
   imagePath: '/img/services/lod-400/lod400_rack.png',
@@ -130,9 +138,12 @@ const lod400ExpertsImageConfig = ref({
 
 <style scoped>
 .lod-400-process-container {
-  text-align: center;
   padding-top: 3rem;
   font-size: 1.3rem;
   font-weight: 600;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 </style>

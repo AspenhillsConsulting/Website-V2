@@ -40,7 +40,6 @@
     </div>
   </header>
 
-  <!-- <parallax-background /> -->
   <RouterView />
 
   <footer>
