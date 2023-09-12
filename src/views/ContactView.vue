@@ -8,14 +8,6 @@
     />
 
     <div class="contact-container">
-      <hero-image 
-      image-path="/img/stock-photo-full-length-portrait-of-three-successful-business-people-wearing-hardhats-and-inspecting-plans-1840551490.jpg"
-      height="200px"
-      full-width
-      :offset="{ x: 50, y: 40 }"
-    />
-
-    <div class="contact-container">
       <content-card>
           <p>
             Whether you already know which BIM/VDC services you need or you're just starting to
@@ -24,24 +16,6 @@
           </p>
         </content-card>
 
-      <content-card>
-        <template v-slot:header>
-          <custom-icon :value="CardAccountDetails" left />
-          Contact info
-        </template>
-        <contact-card />
-        <template v-slot:footer>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/company/aspenhills-consulting-inc." target="_blank">
-              <custom-icon :value="LinkedinIcon" />
-            </a>
-            <a href="http://www.facebook.com/aspenhillsconsulting" target="_blank">
-              <custom-icon :value="FacebookIcon" />
-            </a>
-          </div>
-        </template>
-      </content-card>
-    </div>
       <content-card>
         <template v-slot:header>
           <custom-icon :value="CardAccountDetails" left />
