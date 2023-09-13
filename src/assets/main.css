@@ -192,6 +192,16 @@ a.button:focus {
   margin-bottom: 3rem !important;
 }
 
+.my-7 {
+  margin-top: 3.5rem !important;
+  margin-bottom: 3.5rem !important;
+}
+
+.my-8 {
+  margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
+}
+
 .block-quote {
   margin: 2em 1em 2em 1.5em;
   border-left: 0.2rem solid #e0e0e0;

@@ -9,13 +9,13 @@
       ref="container"
     ></div>
 
-    <div :class="['hero-image-body', { 'darken-image': darkenImage }, tint]" v-if="slots.default">
+    <div :class="['hero-image-body', { 'darken-image': darkenImage }, tint, repeat]" v-if="slots.default">
       <slot></slot>
     </div>
 
     <div
       v-else-if="(texts && texts.length) || tint"
-      :class="['hero-image-body', { 'darken-image': darkenImage }, textSpacing, tint]"
+      :class="['hero-image-body', { 'darken-image': darkenImage }, textSpacing, tint, repeat]"
     >
       <div v-for="text in texts" :key="text" class="hero-image-text-container">
         <span
@@ -32,10 +32,11 @@
 import { useSlots, ref } from 'vue'
 import useParallax from '@/composables/ParallaxScrolling.js'
 
-const { offset, height } = defineProps({
+const { offset, height, repeat } = defineProps({
   imagePath: String,
   darkenImage: Boolean,
   fullWidth: Boolean,
+  repeat: Boolean,
   offset: {
     type: Object,
     default: () => ({ x: 50, y: 0 }),
@@ -80,9 +81,12 @@ const { viewportHeight } = useParallax({
 
 .hero-image {
   position: relative;
-
   background-position: center 0%;
   background-repeat: no-repeat;
+}
+
+.hero-image.repeat{
+  background-repeat: repeat;
 }
 
 .hero-image-body {
@@ -120,11 +124,11 @@ const { viewportHeight } = useParallax({
 }
 
 .darken-image {
-  backdrop-filter: brightness(60%) saturate(50%);
+  backdrop-filter: brightness(75%) saturate(40%);
 }
 
 .hero-image-body.black {
-  backdrop-filter: brightness(60%) saturate(50%);
+  backdrop-filter: brightness(75%) saturate(40%);
 }
 
 .hero-image-body:after {
@@ -143,6 +147,10 @@ const { viewportHeight } = useParallax({
 
 .hero-image-body.blue:after {
   background-color: rgba(12, 29, 102, 0.3);
+}
+
+.hero-image-body.white:after {
+  background-color: rgba(250, 250, 250, 0.75);
 }
 
 .full-width {

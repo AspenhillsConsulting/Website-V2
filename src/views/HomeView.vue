@@ -2,7 +2,7 @@
   <main>
     <hero-image
       image-path="/img/stock-photo-team-civil-engineer-and-contractor-discussion-in-construction-site-team-architect-working-use-bim-2169445773.jpg"
-      darken-image
+      tint="black"
       full-width
       :height="500"
       :offset="{ x: 70, y: -80 }"
@@ -38,6 +38,8 @@
         traditional methods, Aspenhills Consulting are your in-house technology experts.
       </p>
     </content-card>
+
+    <hero-image image-path="/img/dots.svg" full-width repeat :height="100" />
 
     <content-card class="my-6">
       <template v-slot:header>
@@ -133,6 +135,8 @@
         </router-link>
       </template>
     </content-card>
+
+    <hero-image image-path="/img/dots.svg" full-width repeat :height="100" />
 
     <content-card class="my-6">
       <template v-slot:header>
