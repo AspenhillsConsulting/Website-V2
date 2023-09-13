@@ -50,7 +50,7 @@ const services = [
     slug: 'clash-coordination-leadership',
     image: {
       src: '/img/stock-photo-team-of-industrial-engineers-lean-on-office-table-analyze-machinery-blueprints-architectural-1902078616.jpg',
-      offset: { x: 50, y: 60 },
+      offset: { x: 50, y: 0 },
     },
     summary:
       'Without precision models and clash coordination, even the best-laid plans can result in costly changes and delays after construction has started and field teams encounter conflicting designs. Aspenhills Consulting can lead and coordinate all of your teams and contractors to prevent, detect, and correct such design clashes before they cause you problems.',
