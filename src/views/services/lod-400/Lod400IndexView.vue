@@ -83,7 +83,7 @@ const lod400ImageConfig = ref({
   darkenImage: true,
   offset: {
     x: 50,
-    y: 60,
+    y: 0,
   },
   texts: [
     {
@@ -104,7 +104,7 @@ const modelToMachineImageConfig = ref({
   tint: 'green',
   offset: {
     x: 50,
-    y: 50,
+    y: 0,
   },
   texts: [
     {

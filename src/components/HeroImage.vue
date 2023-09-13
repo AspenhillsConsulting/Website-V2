@@ -38,7 +38,7 @@ const { offset, height } = defineProps({
   fullWidth: Boolean,
   offset: {
     type: Object,
-    default: () => ({ x: 50, y: 50 }),
+    default: () => ({ x: 50, y: 0 }),
   },
   height: {
     type: Number,

@@ -5,7 +5,7 @@
       darken-image
       full-width
       :height="500"
-      :offset="{ x: 50, y: -50 }"
+      :offset="{ x: 70, y: -80 }"
     >
       <div class="header-hero-content">
         <div>
@@ -89,7 +89,7 @@
     <hero-image
       image-path="/img/stock-photo-two-engineers-use-digital-tablet-computer-with-augmented-reality-software-to-create-d-cnc-1821601814.jpg"
       full-width
-      :offset="{ x: 50, y: 50 }"
+      :offset="{ x: 25, y: 0 }"
     />
 
     <content-card class="my-6">

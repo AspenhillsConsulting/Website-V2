@@ -1,20 +1,20 @@
 <template>
   <main>
-    <hero-image 
+    <hero-image
       image-path="/img/stock-photo-full-length-portrait-of-three-successful-business-people-wearing-hardhats-and-inspecting-plans-1840551490.jpg"
       :height="200"
       full-width
-      :offset="{ x: 50, y: 40 }"
+      :offset="{ x: 50, y: -200 }"
     />
 
     <div class="contact-container">
       <content-card>
-          <p>
-            Whether you already know which BIM/VDC services you need or you're just starting to
-            investigate the world of modern construction and project management, we're here to answer
-            all of your questions.
-          </p>
-        </content-card>
+        <p>
+          Whether you already know which BIM/VDC services you need or you're just starting to
+          investigate the world of modern construction and project management, we're here to answer
+          all of your questions.
+        </p>
+      </content-card>
 
       <content-card>
         <template v-slot:header>
@@ -46,7 +46,7 @@ import { LinkedinIcon, FacebookIcon, CardAccountDetails } from '@/components/ico
 </script>
 
 <style scoped>
-.contact-container{
+.contact-container {
   display: flex;
   flex-direction: column;
   justify-content: start;

@@ -6,6 +6,8 @@ export default function useParallax({ targetCallback, offset }) {
   let lastKnownScrollPosition
   let target = null
   let targetTop = null
+  let targetParentRect = null
+  let targetParentHeight = null
   const headerHeight = 60.796875
   const viewportHeight = ref(0)
 
@@ -22,28 +24,31 @@ export default function useParallax({ targetCallback, offset }) {
         : (document.documentElement || document.body.parentNode || document.body).scrollTop
 
     window.requestAnimationFrame(() => {
-      const positionY = -targetTop + lastKnownScrollPosition + headerHeight
+      targetParentHeight = targetParentRect.bottom - targetParentRect.top
 
-      target.style['background-position'] = `${offset.x}% calc(${positionY}px + ${offset.y}%)`
+      const positionY = -targetTop + lastKnownScrollPosition + headerHeight + (targetParentHeight * offset.y / 100)
+
+      target.style['background-position'] = `${offset.x}% ${positionY}px`
 
       ticking = false
     })
   }
 
   onMounted(() => {
-    target = targetCallback()
-
-    target.style['background-size'] = 'cover'
-
-    const bodyRect = document.body.getBoundingClientRect()
-    const targetRect = target.getBoundingClientRect()
-    targetTop = targetRect.top - bodyRect.top
-
-    viewportHeight.value = getScrollParent(target).clientParentSize - + headerHeight
-
-    document.addEventListener('scroll', onScroll, { passive: true })
-
     window.setTimeout(() => {
+      target = targetCallback()
+  
+      target.style['background-size'] = 'cover'
+  
+      const bodyRect = document.body.getBoundingClientRect()
+      const targetRect = target.getBoundingClientRect()
+      targetParentRect = target.parentNode.getBoundingClientRect()
+      targetTop = targetRect.top - bodyRect.top
+  
+      viewportHeight.value = getScrollParent(target).clientParentSize - + headerHeight
+  
+      document.addEventListener('scroll', onScroll, { passive: true })
+
       onScroll()
     }, 1)
   })

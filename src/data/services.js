@@ -4,6 +4,7 @@ const services = [
     slug: 'lod-300-350',
     image: {
       src: '/img/stock-photo-bim-model-of-a-building-made-of-metal-construction-metal-structure-d-architectural-construction-1168651771.jpg',
+      offset: { x: 50, y: -250 },
     },
     summary:
       'LOD 300 provides high levels of detail about the size and position of your structures and systems. LOD 350 takes it a step further, detailing how those structures and systems connect together.',

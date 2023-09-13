@@ -74,7 +74,7 @@ const lidarScanningImageConfig = ref({
   darkenImage: true,
   offset: {
     x: 50,
-    y: 60,
+    y: 0,
   },
   texts: [
     {
@@ -91,7 +91,7 @@ const modelToMachineImageConfig = ref({
   darkenImage: true,
   offset: {
     x: 50,
-    y: 50,
+    y: 0,
   },
   texts: [
     {
