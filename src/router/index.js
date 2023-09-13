@@ -3,6 +3,13 @@ import HomeView from '@/views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
   routes: [
     {
       path: '/',
@@ -17,9 +24,33 @@ const router = createRouter({
     },
 
     {
+      path: '/news',
+      name: 'news',
+      component: () => import('@/views/news/NewsIndexView.vue'),
+    },
+
+    {
+      path: '/services',
+      name: 'services',
+      component: () => import('@/views/services/ServicesIndexView.vue'),
+    },
+
+    {
       path: '/services/lod-400',
       name: 'services_lod-400',
       component: () => import('@/views/services/lod-400/Lod400IndexView.vue'),
+    },
+
+    {
+      path: '/services/lidar-scanning',
+      name: 'services_lidar-scanning',
+      component: () => import('@/views/services/lidar-scanning/LidarScanningIndexView.vue'),
+    },
+
+    {
+      path: '/projects',
+      name: 'projects',
+      component: () => import('@/views/projects/ProjectsIndexView.vue'),
     },
 
     {

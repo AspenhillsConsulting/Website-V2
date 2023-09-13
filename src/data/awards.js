@@ -5,7 +5,7 @@ export default [
       'Aspenhills Consulting has received its official certification from the U.S. Department of Veterans Affairs as a Veteran-Owned Small Business',
     to: '/certifications-and-award/vosb',
     image: {
-      src: '/img/awards/vosb.webp',
+      src: '/img/logos/vosb.webp',
       alt: 'VOSB logo',
     },
   },
@@ -16,7 +16,7 @@ export default [
       'Aspenhills Consulting was named among the best BIM companies in 2019 by Analytics Insight',
     href: 'https://www.analyticsinsight.net/best-bim-modeling-companies/',
     image: {
-      src: '/img/awards/analytics_insights.webp',
+      src: '/img/logos/analytics_insights.webp',
       alt: 'Analytics Insight logo',
     },
   },

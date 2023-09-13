@@ -1,15 +1,20 @@
 <template>
   <div
-    :class="['hero-image', { 'full-width': fullWidth }]"
-    :style="{ backgroundImage: `url(${imagePath})`, height }"
-    ref="container"
+    :class="['hero-image-container', { 'full-width': fullWidth }]"
+    :style="{ height: `${height}px` }"
   >
+    <div
+      class="hero-image"
+      :style="{ backgroundImage: `url('${imagePath}')`, height: `${viewportHeight}px` }"
+      ref="container"
+    ></div>
+
     <div :class="['hero-image-body', { 'darken-image': darkenImage }, tint]" v-if="slots.default">
       <slot></slot>
     </div>
 
     <div
-      v-else-if="texts && texts.length"
+      v-else-if="(texts && texts.length) || tint"
       :class="['hero-image-body', { 'darken-image': darkenImage }, textSpacing, tint]"
     >
       <div v-for="text in texts" :key="text" class="hero-image-text-container">
@@ -27,21 +32,17 @@
 import { useSlots, ref } from 'vue'
 import useParallax from '@/composables/ParallaxScrolling.js'
 
-const { offset, maxParallax } = defineProps({
+const { offset, height } = defineProps({
   imagePath: String,
   darkenImage: Boolean,
   fullWidth: Boolean,
   offset: {
     type: Object,
-    default: () => ({ x: 50, y: 50 }),
+    default: () => ({ x: 50, y: 0 }),
   },
   height: {
-    type: String,
-    default: '400px',
-  },
-  maxParallax: {
     type: Number,
-    default: -50,
+    default: 400,
   },
   texts: {
     type: Array,
@@ -64,26 +65,28 @@ const slots = useSlots()
 
 const container = ref(null)
 
-useParallax({
+const { viewportHeight } = useParallax({
   targetCallback: () => container.value,
-  maxParallax: maxParallax,
-  offset: offset,
+  offset,
 })
 </script>
 
 <style scoped>
-.hero-image {
+.hero-image-container {
   position: relative;
   border-radius: 0.25rem;
   overflow: hidden;
+}
+
+.hero-image {
+  position: relative;
 
   background-position: center 0%;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .hero-image-body {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;

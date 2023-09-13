@@ -22,7 +22,7 @@
           Home
         </RouterLink>
 
-        <RouterLink to="/services" tabindex="0">
+        <RouterLink to="/services" tabindex="0" :exact="false">
           <custom-icon :value="MoreIcon" left />
           Services
         </RouterLink>
@@ -40,7 +40,6 @@
     </div>
   </header>
 
-  <!-- <parallax-background /> -->
   <RouterView />
 
   <footer>
@@ -66,12 +65,19 @@
       <div class="footer-column-title">Links</div>
       <ul class="extra-links">
         <li>
-          <img
-            src="/img/awards/vosb.webp"
-            width="50"
-            class="vosb-logo"
-            alt="Veteran-owned small business logo"
-          />
+          <router-link to="/services"> Services </router-link>
+        </li>
+
+        <li>
+          <router-link to="/projects"> Projects </router-link>
+        </li>
+
+        <li>
+          <router-link to="/news"> News </router-link>
+        </li>
+
+        <li>
+          <router-link to="/contact"> Contact </router-link>
         </li>
       </ul>
     </div>

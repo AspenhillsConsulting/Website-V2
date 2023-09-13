@@ -17,7 +17,7 @@
       <span class="tel"> +1-719-338-6078 </span>
     </div>
 
-    <div class="vcard-section">
+    <div class="vcard-section" v-if="!small">
       <custom-icon :value="MapIcon" :size="1.3" />
       <div class="adr">
         <div class="street-address">9936 English Ivy Ct</div>

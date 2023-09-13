@@ -1,6 +1,6 @@
 <template>
   <main>
-    <HeroImage v-bind="lod400ImageConfig" />
+    <hero-image v-bind="lod400ImageConfig" />
 
     <content-card class="my-6">
       <template v-slot:header> The future of construction management </template>
@@ -18,10 +18,16 @@
         construction management, today.
       </p>
 
-      <div class="lod-400-process-container">Modelling → Fabrication → Scheduling</div>
+      <div class="lod-400-process-container">
+        Modelling
+        <custom-icon :value="ArrowRightThickIcon" />
+        Fabrication
+        <custom-icon :value="ArrowRightThickIcon" />
+        Scheduling
+      </div>
     </content-card>
 
-    <HeroImage v-bind="modelToMachineImageConfig" />
+    <hero-image v-bind="modelToMachineImageConfig" />
 
     <content-card class="my-6">
       <template v-slot:header> Automated fabrication </template>
@@ -41,7 +47,7 @@
       </ul>
     </content-card>
 
-    <HeroImage v-bind="lod400ExpertsImageConfig" />
+    <hero-image v-bind="lod400ExpertsImageConfig" />
 
     <content-card class="my-6">
       <template v-slot:header> Select projects </template>
@@ -67,16 +73,17 @@
 import { ref } from 'vue'
 import HeroImage from '@/components/HeroImage.vue'
 import ContentCard from '@/components/ContentCard.vue'
+import CustomIcon from '@/components/CustomIcon.vue'
+import { ArrowRightThickIcon } from '@/components/icons'
 
 const lod400ImageConfig = ref({
   imagePath: '/img/services/lod-400/lod400_rack.png',
   fullWidth: true,
-  height: '400px',
-  maxParallax: -30,
+  height: 400,
   darkenImage: true,
   offset: {
     x: 50,
-    y: 60,
+    y: 0,
   },
   texts: [
     {
@@ -92,13 +99,12 @@ const lod400ImageConfig = ref({
 const modelToMachineImageConfig = ref({
   imagePath: '/img/services/lod-400/spool_rack.png',
   fullWidth: true,
-  height: '250px',
-  maxParallax: -30,
+  height: 250,
   darkenImage: true,
   tint: 'green',
   offset: {
     x: 50,
-    y: 50,
+    y: 0,
   },
   texts: [
     {
@@ -111,8 +117,7 @@ const modelToMachineImageConfig = ref({
 const lod400ExpertsImageConfig = ref({
   imagePath: '/img/main.jpg',
   fullWidth: true,
-  height: '250px',
-  maxParallax: -30,
+  height: 250,
   tint: 'blue',
   darkenImage: true,
   offset: {
@@ -130,9 +135,12 @@ const lod400ExpertsImageConfig = ref({
 
 <style scoped>
 .lod-400-process-container {
-  text-align: center;
   padding-top: 3rem;
   font-size: 1.3rem;
   font-weight: 600;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 </style>
