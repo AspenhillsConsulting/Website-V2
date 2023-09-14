@@ -38,7 +38,7 @@ const services = [
   },
   {
     title: 'Owner Facilities Management',
-    slug: 'owner-fm',
+    slug: 'owner-facilities-management',
     image: {
       src: '/img/services/Basement model.jpg',
     },
