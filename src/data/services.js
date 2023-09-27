@@ -4,7 +4,7 @@ const services = [
     slug: 'lod-300-350',
     image: {
       src: '/img/stock-photo-bim-model-of-a-building-made-of-metal-construction-metal-structure-d-architectural-construction-1168651771.jpg',
-      offset: { x: 50, y: -250 },
+      offset: { x: 50, y: 50 },
     },
     summary:
       'LOD 300 provides high levels of detail about the size and position of your structures and systems. LOD 350 takes it a step further, detailing how those structures and systems connect together.',
@@ -14,6 +14,7 @@ const services = [
     slug: 'lod-400',
     image: {
       src: '/img/services/lod-400/lod400_rack.png',
+      offset: { x: 50, y: 30 },
     },
     summary:
       'LOD 400 offers unparalleled coordination and efficiency throughout the lifecycle of your project. By modelling each component to the level required for automated fabrication and then scheduling the delivery and assembly of every part, LOD 400 project plans are the future of construction management, today.',

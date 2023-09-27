@@ -5,11 +5,18 @@
   >
     <div
       class="hero-image"
-      :style="{ backgroundImage: `url('${imagePath}')`, height: `${viewportHeight}px` }"
+      :style="{
+        backgroundImage: `url('${imagePath}')`,
+        height: enableParallax ? `${viewportHeight}px` : `${height}px`,
+        backgroundPosition: enableParallax ? null : `${offset.x}% ${offset.y}%`,
+      }"
       ref="container"
     ></div>
 
-    <div :class="['hero-image-body', { 'darken-image': darkenImage }, tint, repeat]" v-if="slots.default">
+    <div
+      :class="['hero-image-body', { 'darken-image': darkenImage }, tint, repeat]"
+      v-if="slots.default"
+    >
       <slot></slot>
     </div>
 
@@ -32,10 +39,11 @@
 import { useSlots, ref } from 'vue'
 import useParallax from '@/composables/ParallaxScrolling.js'
 
-const { offset, height, repeat } = defineProps({
+const { offset, height, repeat, enableParallax } = defineProps({
   imagePath: String,
   darkenImage: Boolean,
   fullWidth: Boolean,
+  enableParallax: Boolean,
   repeat: Boolean,
   offset: {
     type: Object,
@@ -66,10 +74,12 @@ const slots = useSlots()
 
 const container = ref(null)
 
-const { viewportHeight } = useParallax({
-  targetCallback: () => container.value,
-  offset,
-})
+if (enableParallax) {
+  const { viewportHeight } = useParallax({
+    targetCallback: () => container.value,
+    offset,
+  })
+}
 </script>
 
 <style scoped>
@@ -83,9 +93,10 @@ const { viewportHeight } = useParallax({
   position: relative;
   background-position: center 0%;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.hero-image.repeat{
+.hero-image.repeat {
   background-repeat: repeat;
 }
 

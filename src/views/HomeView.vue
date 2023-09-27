@@ -5,7 +5,7 @@
       tint="black"
       full-width
       :height="500"
-      :offset="{ x: 70, y: -80 }"
+      :offset="{ x: 70, y: 30 }"
     >
       <div class="header-hero-content">
         <div>
@@ -39,7 +39,7 @@
       </p>
     </content-card>
 
-    <hero-image image-path="/img/dots.svg" full-width repeat :height="100" />
+    <hero-image image-path="/img/dots.svg" full-width repeat :height="110" />
 
     <content-card class="my-6">
       <template v-slot:header>
@@ -88,10 +88,13 @@
       </template>
     </content-card>
 
-    <hero-image
-      image-path="/img/stock-photo-two-engineers-use-digital-tablet-computer-with-augmented-reality-software-to-create-d-cnc-1821601814.jpg"
+    <!-- <hero-image
+      image-path="/img/two-engineers-with-ar.webp"
       full-width
       :offset="{ x: 25, y: 0 }"
+    /> -->
+    <responsive-image
+      image-path="/img/two-engineers-with-ar"
     />
 
     <content-card class="my-6">
@@ -136,7 +139,7 @@
       </template>
     </content-card>
 
-    <hero-image image-path="/img/dots.svg" full-width repeat :height="100" />
+    <hero-image image-path="/img/dots.svg" full-width repeat :height="110" />
 
     <content-card class="my-6">
       <template v-slot:header>
@@ -154,11 +157,14 @@
       </template>
     </content-card>
 
-    <hero-image
+    <!-- <hero-image
       image-path="/img/stock-photo-russia-kemerovo-land-surveyor-equipment-robotic-total-station-theodolite-standing-on-1342225910.jpg"
       full-width
       :height="300"
       :offset="{ x: 50, y: 90 }"
+    /> -->
+    <responsive-image
+      image-path="/img/trimble-total-station"
     />
   </main>
 </template>
@@ -182,9 +188,17 @@ const headerLineOne = 'Your emerging AECO technology and process partner'
 const headerLineTwo = 'Education - Selection - Implementation'
 
 import awards from '@/data/awards.js'
+import ResponsiveImage from '../components/ResponsiveImage.vue'
 </script>
 
 <style scoped>
+.full-width-image {
+  width: 100%;
+  position: relative;
+  left: 0;
+  border-radius: 0.2rem;
+}
+
 .header-hero-content {
   color: #f5f5f5;
   text-align: center;
