@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+// eslint-disable-next-line no-undef
 const mode = process.env.APP_ENV || 'development'
 
 // https://vitejs.dev/config/
