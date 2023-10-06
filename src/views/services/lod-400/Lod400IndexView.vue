@@ -47,9 +47,9 @@
       </ul>
     </content-card>
 
-    <hero-image v-bind="lod400ExpertsImageConfig" />
+    <hero-image v-bind="lod400ExpertsImageConfig" v-if="features.projects.enabled" />
 
-    <content-card class="my-6">
+    <content-card class="my-6" v-if="features.projects.enabled">
       <template v-slot:header> Select projects </template>
 
       <p>
@@ -75,6 +75,7 @@ import HeroImage from '@/components/HeroImage.vue'
 import ContentCard from '@/components/ContentCard.vue'
 import CustomIcon from '@/components/CustomIcon.vue'
 import { ArrowRightThickIcon } from '@/components/icons'
+import features from '@/composables/Features'
 
 const lod400ImageConfig = ref({
   imagePath: '/img/services/lod-400/lod400_rack.png',

@@ -7,7 +7,7 @@
 	<style>
 		tspan { white-space:pre }
 	</style>
-	<use  href="#img1" x="0" y="0" />
-	<use  href="#img2" x="0" y="0" />
-	<use  href="#img3" x="-44" y="-1" />
+	<use href="#img1" x="0" y="0" />
+	<use href="#img2" x="0" y="0" />
+	<use href="#img3" x="-44" y="-1" />
 </svg>

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
+import features from '@/composables/Features'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,14 +44,33 @@ const router = createRouter({
 
     {
       path: '/services/lidar-scanning',
-      name: 'services_lidar-scanning',
+      name: 'services_lidar_scanning',
       component: () => import('@/views/services/lidar-scanning/LidarScanningIndexView.vue'),
+    },
+
+    {
+      path: '/services/owner-facilities-management',
+      name: 'services_facilities_management',
+      component: () =>
+        import(
+          '@/views/services/owner-facilities-management/OwnerFacilitiesManagementIndexView.vue'
+        ),
+    },
+
+    {
+      path: '/services/clash-coordination-leadership',
+      name: 'services_clash_coordination_leadership',
+      component: () =>
+        import(
+          '@/views/services/clash-coordination-leadership/ClashCoordinationLeadershipIndexView.vue'
+        ),
     },
 
     {
       path: '/projects',
       name: 'projects',
       component: () => import('@/views/projects/ProjectsIndexView.vue'),
+      beforeEnter: () => features.value.projects.enabled,
     },
 
     {
