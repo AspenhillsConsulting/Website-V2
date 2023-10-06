@@ -70,7 +70,7 @@ const router = createRouter({
       path: '/projects',
       name: 'projects',
       component: () => import('@/views/projects/ProjectsIndexView.vue'),
-      beforeEnter: (to, from) => features.value.projects.enabled,
+      beforeEnter: () => features.value.projects.enabled,
     },
 
     {

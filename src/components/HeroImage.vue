@@ -75,7 +75,7 @@ const slots = useSlots()
 const container = ref(null)
 
 if (enableParallax) {
-  const { viewportHeight } = useParallax({
+  useParallax({
     targetCallback: () => container.value,
     offset,
   })
