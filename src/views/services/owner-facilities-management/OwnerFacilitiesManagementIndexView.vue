@@ -93,9 +93,10 @@
         models, your staff will never be surprised by their documentation not matching reality.
       </p>
     </content-card>
-    <hero-image v-bind="lod400ExpertsImageConfig" />
 
-    <content-card class="my-6">
+    <hero-image v-bind="lod400ExpertsImageConfig" v-if="features.projects.enabled" />
+
+    <content-card class="my-6" v-if="features.projects.enabled">
       <template v-slot:header> Select projects </template>
 
       <p>
@@ -119,6 +120,7 @@
 import { ref } from 'vue'
 import HeroImage from '@/components/HeroImage.vue'
 import ContentCard from '@/components/ContentCard.vue'
+import features from '@/composables/Features'
 
 const lidarScanningImageConfig = ref({
   imagePath: '/img/services/Basement model.jpg',

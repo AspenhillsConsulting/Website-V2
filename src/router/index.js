@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
+import features from '@/composables/Features'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,7 +51,10 @@ const router = createRouter({
     {
       path: '/services/owner-facilities-management',
       name: 'services_facilities_management',
-      component: () => import('@/views/services/owner-facilities-management/OwnerFacilitiesManagementIndexView.vue'),
+      component: () =>
+        import(
+          '@/views/services/owner-facilities-management/OwnerFacilitiesManagementIndexView.vue'
+        ),
     },
 
     {
@@ -66,6 +70,7 @@ const router = createRouter({
       path: '/projects',
       name: 'projects',
       component: () => import('@/views/projects/ProjectsIndexView.vue'),
+      beforeEnter: (to, from) => features.value.projects.enabled,
     },
 
     {

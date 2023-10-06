@@ -27,7 +27,7 @@
           Services
         </RouterLink>
 
-        <RouterLink to="/projects" tabindex="0">
+        <RouterLink to="/projects" tabindex="0" v-if="features.projects.enabled">
           <custom-icon :value="ViewCarouselIcon" left />
           Projects
         </RouterLink>
@@ -68,7 +68,7 @@
           <router-link to="/services"> Services </router-link>
         </li>
 
-        <li>
+        <li v-if="features.projects.enabled">
           <router-link to="/projects"> Projects </router-link>
         </li>
 
@@ -90,6 +90,7 @@ import CustomIcon from '@/components/CustomIcon.vue'
 import { HomeIcon, EmailIcon, ViewCarouselIcon, MoreIcon } from '@/components/icons'
 import ContactCard from '@/components/ContactCard.vue'
 import { services } from '@/data/services.js'
+import features from '@/composables/Features'
 </script>
 
 <style>

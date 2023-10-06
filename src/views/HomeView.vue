@@ -131,7 +131,7 @@
         overcome many of the initial complications and concerns associated with these initiatives.
       </p>
 
-      <template v-slot:footer>
+      <template v-slot:footer v-if="features.projects.enabled">
         <router-link to="/projects" class="button" tabindex="0">
           Our Projects
           <custom-icon :value="ArrowRightThickIcon" right :size="1.3" />
@@ -189,6 +189,8 @@ const headerLineTwo = 'Education - Selection - Implementation'
 
 import awards from '@/data/awards.js'
 import ResponsiveImage from '../components/ResponsiveImage.vue'
+
+import features from '@/composables/Features'
 </script>
 
 <style scoped>

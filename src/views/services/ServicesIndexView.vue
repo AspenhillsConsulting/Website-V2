@@ -3,9 +3,8 @@
     <div v-for="service in services" :key="service.slug" class="service">
       <hero-image
         :image-path="service.image.src"
-        full-width
         tint="black"
-        :height="180"
+        :height="240"
         :offset="service.image.offset"
         v-if="service.image && service.image.src"
       />
@@ -39,7 +38,7 @@ import { services } from '@/data/services'
 
 <style scoped>
 .service {
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 .service:first-child {
