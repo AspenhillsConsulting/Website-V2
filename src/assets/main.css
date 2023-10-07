@@ -9,17 +9,21 @@
 
   --text-primary-color: #323232;
 
-  --layout-padding: 0 1rem;
-  --layout-max-width: 95%;
+  --layout-padding: 0;
+  --layout-max-width: 100%;
   --layout-width-minus-scrollbar: calc(100svw - 16.1px);
 
   --header-height: 3.8rem;
   --body-min-height: calc(100svh - var(--header-height));
+
+  font-size: 1rem;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) {
   :root {
-    font-size: 0.85rem;
+    font-size: 1rem;
+    --layout-padding: 0 1rem;
+    --layout-max-width: 95%;
   }
 }
 
@@ -205,6 +209,78 @@ a.button:focus {
 
 .my-8 {
   margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mt-1 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-2 {
+  margin-top: 1rem !important;
+}
+
+.mt-3 {
+  margin-top: 1.5rem !important;
+}
+
+.mt-4 {
+  margin-top: 2rem !important;
+}
+
+.mt-5 {
+  margin-top: 2.5rem !important;
+}
+
+.mt-6 {
+  margin-top: 3rem !important;
+}
+
+.mt-7 {
+  margin-top: 3.5rem !important;
+}
+
+.mt-8 {
+  margin-top: 4rem !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 2rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 2.5rem !important;
+}
+
+.mb-6 {
+  margin-bottom: 3rem !important;
+}
+
+.mb-7 {
+  margin-bottom: 3.5rem !important;
+}
+
+.mb-8 {
   margin-bottom: 4rem !important;
 }
 

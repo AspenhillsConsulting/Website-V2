@@ -26,6 +26,9 @@ const slots = useSlots()
 
 <style scoped>
 .card {
+  max-width: 100%;
+  width: 80ch;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -36,8 +39,6 @@ const slots = useSlots()
     0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14),
     0px 1px 5px 0px rgba(0, 0, 0, 0.12); */
-
-  max-width: 100%;
 
   /* background: #fff; */
 }

@@ -1,10 +1,7 @@
 <template>
   <main>
-    <hero-image
-      image-path="/img/stock-photo-full-length-portrait-of-three-successful-business-people-wearing-hardhats-and-inspecting-plans-1840551490.jpg"
-      :height="200"
-      full-width
-      :offset="{ x: 50, y: -200 }"
+    <responsive-image
+      image-path="/img/contact-header"
     />
 
     <div class="contact-container">
@@ -41,7 +38,7 @@
 import ContentCard from '@/components/ContentCard.vue'
 import CustomIcon from '@/components/CustomIcon.vue'
 import ContactCard from '@/components/ContactCard.vue'
-import HeroImage from '@/components/HeroImage.vue'
+import ResponsiveImage from '@/components/ResponsiveImage.vue'
 import { LinkedinIcon, FacebookIcon, CardAccountDetails } from '@/components/icons'
 </script>
 
@@ -50,8 +47,8 @@ import { LinkedinIcon, FacebookIcon, CardAccountDetails } from '@/components/ico
   display: flex;
   flex-direction: column;
   justify-content: start;
-  gap: 3rem;
-  margin-top: 3rem;
+  gap: 2rem;
+  margin-top: 2rem;
   flex: 1 1 auto;
 }
 
@@ -67,10 +64,5 @@ import { LinkedinIcon, FacebookIcon, CardAccountDetails } from '@/components/ico
 
 .social-links > a {
   color: inherit;
-}
-
-:deep(.card) {
-  width: 80ch;
-  margin: 0 auto;
 }
 </style>

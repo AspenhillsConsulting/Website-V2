@@ -1,10 +1,7 @@
 <template>
   <main>
-    <hero-image
-      image-path="/img/stock-photo-news-corporate-background-blue-abstract-business-concept-1338237566.jpg"
-      full-width
-      :height="250"
-      :offset="{ x: 10, y: -150 }"
+    <responsive-image
+      image-path="/img/news-header"
     />
 
     <content-card class="my-4">
@@ -46,7 +43,7 @@
 import { news } from '@/data/news.js'
 import ContentCard from '@/components/ContentCard.vue'
 import CustomIcon from '@/components/CustomIcon.vue'
-import HeroImage from '@/components/HeroImage.vue'
+import ResponsiveImage from '@/components/ResponsiveImage.vue'
 import { NewspaperVariantMultipleOutlineIcon } from '@/components/icons'
 </script>
 
