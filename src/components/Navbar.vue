@@ -120,6 +120,7 @@ header {
 .title {
   text-transform: uppercase;
   line-height: 1.4rem;
+  user-select: none;
 }
 
 .title > :first-child {

@@ -1,5 +1,5 @@
 <template>
-  <navbar />
+  <nav-bar />
 
   <RouterView />
 
@@ -50,7 +50,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import ContactCard from '@/components/ContactCard.vue'
 import { services } from '@/data/services.js'
 import features from '@/composables/Features'
-import Navbar from '@/components/Navbar.vue'
+import NavBar from '@/components/NavBar.vue'
 </script>
 
 <style>
