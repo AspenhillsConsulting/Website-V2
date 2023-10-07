@@ -1,44 +1,5 @@
 <template>
-  <header>
-    <div class="header-inner">
-      <div class="branding">
-        <img
-          alt="Aspenhills Consulting logo"
-          class="logo"
-          src="@/assets/logo.svg"
-          width="42"
-          height="42"
-        />
-
-        <div class="title">
-          <div>Aspenhills</div>
-          <div>Consulting</div>
-        </div>
-      </div>
-
-      <nav>
-        <RouterLink to="/" tabindex="0">
-          <custom-icon :value="HomeIcon" left />
-          Home
-        </RouterLink>
-
-        <RouterLink to="/services" tabindex="0" :exact="false">
-          <custom-icon :value="MoreIcon" left />
-          Services
-        </RouterLink>
-
-        <RouterLink to="/projects" tabindex="0" v-if="features.projects.enabled">
-          <custom-icon :value="ViewCarouselIcon" left />
-          Projects
-        </RouterLink>
-
-        <RouterLink to="/contact" tabindex="0">
-          <custom-icon :value="EmailIcon" left />
-          Contact
-        </RouterLink>
-      </nav>
-    </div>
-  </header>
+  <navbar />
 
   <RouterView />
 
@@ -86,11 +47,10 @@
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import CustomIcon from '@/components/CustomIcon.vue'
-import { HomeIcon, EmailIcon, ViewCarouselIcon, MoreIcon } from '@/components/icons'
 import ContactCard from '@/components/ContactCard.vue'
 import { services } from '@/data/services.js'
 import features from '@/composables/Features'
+import Navbar from '@/components/Navbar.vue'
 </script>
 
 <style>
@@ -100,73 +60,6 @@ import features from '@/composables/Features'
 </style>
 
 <style scoped>
-header {
-  position: fixed;
-  width: 100%;
-  background-color: #555;
-  top: 0;
-  height: 3.8rem;
-  z-index: 1;
-  box-shadow: 0 3px 3px 0 #0005;
-}
-
-.header-inner {
-  margin: 0 auto;
-  width: var(--layout-max-width);
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 0.5rem;
-  line-height: 1.5;
-  color: white;
-}
-
-.branding {
-  display: flex;
-  padding: 0.5rem 0;
-  gap: 0.5rem;
-}
-
-.title {
-  text-transform: uppercase;
-  line-height: 1.4rem;
-}
-
-.title > :first-child {
-  font-size: 1.52rem;
-}
-
-.title > :last-child {
-  font-size: 1.4rem;
-}
-
-nav {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-nav > a {
-  padding: 1rem;
-  display: flex;
-  color: #f3f3f3;
-  align-items: center;
-  text-transform: uppercase;
-  letter-spacing: 0.06rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-nav > a:hover,
-nav > a:focus {
-  background: var(--accent-color-opacity);
-}
-
-nav > a[aria-current='page'] {
-  background: var(--accent-color);
-  color: var(--text-primary-color);
-}
-
 footer {
   width: 100%;
   background-color: #555;

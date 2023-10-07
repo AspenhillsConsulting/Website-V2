@@ -212,7 +212,6 @@ import features from '@/composables/Features'
 .header-hero-content > :first-child > span {
   font-size: 2.3rem;
   max-width: 30ch;
-  /* margin-bottom: 6rem; */
   letter-spacing: 0.02em;
 }
 
