@@ -17,7 +17,7 @@
       </div>
     </hero-image>
 
-    <content-card class="my-6">
+    <content-card class="mt-6 mb-3">
       <template v-slot:header>
         <custom-icon :value="CubeScanIcon" left :size="1.2" />
         The future of design & management
@@ -39,6 +39,14 @@
       </p>
     </content-card>
 
+    <responsive-image
+      image-path="/img/bim-vdc-lifecycle"
+      :sizes="[480, 768]"
+      id="bim-vdc-lifecycle"
+      class="my-3"
+      alt="BIM/VDC Lifecycle: Scanning, Modelling, Clash Coordination, Scheduling, Fabrication, Construction, Repeat."
+    />
+
     <hero-image image-path="/img/dots.svg" full-width repeat :height="110" />
 
     <content-card class="my-6">
@@ -55,13 +63,6 @@
         <li>BIM to Facilities Management Process</li>
         <li>Technology and process training &amp; mentoring</li>
       </ul>
-
-      <template v-slot:footer>
-        <router-link to="/services" class="button" tabindex="0">
-          All services
-          <custom-icon :value="ArrowRightThickIcon" right :size="1.3" />
-        </router-link>
-      </template>
     </content-card>
 
     <content-card class="my-6">
@@ -88,14 +89,14 @@
       </template>
     </content-card>
 
+    <hero-image image-path="/img/dots.svg" full-width repeat :height="110" />
+
     <!-- <hero-image
       image-path="/img/two-engineers-with-ar.webp"
       full-width
       :offset="{ x: 25, y: 0 }"
     /> -->
-    <responsive-image
-      image-path="/img/two-engineers-with-ar"
-    />
+    <responsive-image image-path="/img/two-engineers-with-ar" class="mt-6" />
 
     <content-card class="my-6">
       <template v-slot:header>
@@ -104,31 +105,31 @@
       </template>
 
       <p>
-        Our staff come from extensive backgrounds within large construction contractors. We have
-        personal experience with the selection and implementation of the same tools and processes we
-        now provide.
+        Our staff have extensive backgrounds within large construction contractors. We have personal
+        experience with the selection and implementation of the same tools and processes we now
+        provide.
       </p>
 
       <p>
         We view the utilization of BIM/VDC tools and processes not simply as technicians, but as end
-        users aiming to enhance efficiency, scheduling, quality, safety, and profitability. Through
-        experience, our managers have seen firsthand the technical and human challenges required for
-        successful deployment within companies, as well as with outside team members; and we can
-        uniquely provide the solutions.
+        users aiming to enhance efficiency, scheduling, quality, safety, and profitability. Our
+        managers have seen firsthand the technical and human challenges required for successful
+        deployment within companies, as well as with outside team members; and we can uniquely
+        provide the solutions.
       </p>
 
       <div class="block-quote">
-        We're committed to assisting your team with the use of these enhanced capabilities so you
-        can derive the maximum value from BIM/VDC.
+        We're committed to making BIM/VDC work for your projects. Maximize knowledge, minimize risk,
+        streamline processes.
       </div>
 
       <p>
-        Aspenhills Consulting is available to fill the role of BIM technology and process experts
-        for your company or team. We stay informed of the new developments in the industry on a
-        world-wide scale so that you don't have to. We provide unbiased assistance in the selection
-        and implementation of the most appropriate software and processes to meet your goals. Most
-        importantly, with our ongoing training and mentoring of your personnel, we can help to
-        overcome many of the initial complications and concerns associated with these initiatives.
+        Aspenhills Consulting can fill the role of BIM technology and process experts for your team,
+        no matter what stage your project is in. Our staff are modern process experts so that you
+        don't have to be. We provide unbiased assistance in the selection and implementation of the
+        most appropriate software and processes to meet your goals. Most importantly, with our
+        ongoing training and mentoring of your personnel, you can avoid the stress and pitfalls that
+        can come with adopting BIM/VDC for the first time.
       </p>
 
       <template v-slot:footer v-if="features.projects.enabled">
@@ -156,16 +157,6 @@
         </router-link>
       </template>
     </content-card>
-
-    <!-- <hero-image
-      image-path="/img/stock-photo-russia-kemerovo-land-surveyor-equipment-robotic-total-station-theodolite-standing-on-1342225910.jpg"
-      full-width
-      :height="300"
-      :offset="{ x: 50, y: 90 }"
-    /> -->
-    <responsive-image
-      image-path="/img/trimble-total-station"
-    />
   </main>
 </template>
 
@@ -194,11 +185,8 @@ import features from '@/composables/Features'
 </script>
 
 <style scoped>
-.full-width-image {
-  width: 100%;
-  position: relative;
-  left: 0;
-  border-radius: 0.2rem;
+#bim-vdc-lifecycle {
+  height: 500px;
 }
 
 .header-hero-content {
@@ -281,11 +269,6 @@ import features from '@/composables/Features'
 
 .services > * {
   flex: 1 1 100%;
-}
-
-:deep(.card) {
-  width: 80ch;
-  margin: 0 auto;
 }
 
 .award + .award {

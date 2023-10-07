@@ -177,6 +177,7 @@ footer {
   gap: 3rem;
   color: #fefefe;
   padding: 1rem 0 2rem 0;
+  margin-top: 3rem;
 }
 
 .footer-column {
